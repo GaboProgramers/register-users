@@ -1,0 +1,49 @@
+.message__container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2.5em 3em;
+    border-radius: 1em;
+}
+
+.message__title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.message__paragraph {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.message__span {
+    font-weight: bold;
+}
+
+.message__btn {
+    width: 100%;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #ccc;
+    padding: .5em 2em;
+    background-color: #555a88;
+    border-radius: .3em;
+    font-weight: 500;
+}
+
+@media (max-width: 400px) {
+    .message__title {
+        font-size: 1.7rem;
+        font-weight: 800;
+    }
+
+    .message__paragraph {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}
