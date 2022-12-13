@@ -14,7 +14,10 @@ function App() {
   // apertura y cierre componente del formulario
   const [closeForm, setCloseForm] = useState(true)
   // modal Success
-  const [message, setMessage] = useState(true)
+  const [message, setMessage] = useState({
+    isClose: true,
+    msg: ''
+  })
 
   useEffect(() => {
     getAllData()
@@ -35,8 +38,9 @@ function App() {
           setCloseForm={setCloseForm}
         />
       </div>
-      <div className={`form__container ${message && 'close__form'}`}>
+      <div className={`form__container ${message.isClose && 'close__form'}`}>
         <Message
+          message={message.msg}
           setMessage={setMessage}
         />
       </div>

@@ -10,7 +10,10 @@ const UserCard = ({ user, getAllData, setUpdateInfo, setCloseForm, setMessage })
         axios.delete(URL)
             .then(() => {
                 getAllData()
-                setMessage(false)
+                setMessage({
+                    isClose: false,
+                    msg: `${user.first_name} ${user.last_name}`
+                })
             })
             .catch(err => console.log(err))
     }
